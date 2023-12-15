@@ -12,7 +12,7 @@ class TodayWeather extends StatefulWidget {
 
 class _TodayWeatherState extends State<TodayWeather>
 {
-  int _bottomItemIndex = 2;
+  int _bottomItemIndex = 0;
 
   final List<Widget> _pages = [
     Weather(),
