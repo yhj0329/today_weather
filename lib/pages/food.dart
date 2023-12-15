@@ -47,25 +47,52 @@ class Food extends StatelessWidget {
   Widget foodRecommend(String text) {
     if (text == "맑음") {
       return SizedBox(
+        height: 430,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Image.asset("assets/food/chicken.jpeg"),
-                Text("치킨", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/chicken.jpeg", width: 200, height: 150,),
+                  const Text("치킨", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Image.asset("assets/food/pig_foot.jpeg"),
-                Text("족발", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/pig_foot.jpeg", width: 200, height: 150,),
+                  const Text("족발", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
           ],
         ),
@@ -73,25 +100,52 @@ class Food extends StatelessWidget {
     }
     else if (text == "구름많음") {
       return SizedBox(
+        height: 430,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Image.asset("assets/food/kalguksu.jpeg"),
-                Text("칼국수", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/kalguksu.jpeg", width: 200, height: 150,),
+                  const Text("칼국수", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Image.asset("assets/food/kimchi_stew.jpeg"),
-                Text("김치찌개", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/kimchi_stew.jpeg", width: 200, height: 150,),
+                  const Text("김치찌개", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
           ],
         ),
@@ -99,25 +153,52 @@ class Food extends StatelessWidget {
     }
     else if (text == "흐림") {
       return SizedBox(
+        height: 430,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Image.asset("assets/food/pork_belly.jpeg"),
-                Text("삼겹살", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/pork_belly.jpeg", width: 200, height: 150,),
+                  const Text("삼겹살", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Image.asset("assets/food/samgyetang.jpeg"),
-                Text("삼계탕", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/samgyetang.jpeg", width: 200, height: 150,),
+                  const Text("삼계탕", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
           ],
         ),
@@ -125,25 +206,52 @@ class Food extends StatelessWidget {
     }
     else if (text.contains("비")) {
       return SizedBox(
+        height: 430,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Image.asset("assets/food/kimchi_pancake.jpeg"),
-                Text("김치전", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/kimchi_pancake.jpeg", width: 200, height: 150,),
+                  const Text("김치전", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Image.asset("assets/food/potato_pancake.jpeg"),
-                Text("감자전", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/potato_pancake.jpeg", width: 200, height: 150,),
+                  const Text("감자전", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
           ],
         ),
@@ -151,25 +259,52 @@ class Food extends StatelessWidget {
     }
     else if (text.contains("눈")) {
       return SizedBox(
+        height: 430,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Image.asset("assets/food/fish_paste_soup.jpeg"),
-                Text("오뎅탕", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/fish_paste_soup.jpeg", width: 200, height: 150,),
+                  const Text("오뎅탕", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Image.asset("assets/food/braised_spicy_chicken.jpeg"),
-                Text("닭볶음탕", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/braised_spicy_chicken.jpeg", width: 200, height: 150,),
+                  const Text("닭볶음탕", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
           ],
         ),
@@ -177,25 +312,52 @@ class Food extends StatelessWidget {
     }
     else {
       return SizedBox(
+        height: 430,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Row(
-              children: [
-                Image.asset("assets/food/ramen.jpeg"),
-                Text("라면", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/ramen.jpeg", width: 200, height: 150,),
+                  const Text("라면", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Image.asset("assets/food/tteokbokki.jpeg"),
-                Text("떡볶이", style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500
-                ))
-              ],
+            Container(
+              width: 400,
+              height: 200,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: Colors.grey,
+                      style: BorderStyle.solid,
+                      width: 3
+                  )
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset("assets/food/tteokbokki.jpeg", width: 200, height: 150,),
+                  const Text("떡볶이", style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700
+                  ))
+                ],
+              ),
             ),
           ],
         ),
