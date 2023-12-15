@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:today_weather/pages/weather.dart';
 import 'package:today_weather/pages/clothes.dart';
 import 'package:today_weather/pages/food.dart';
-import 'package:provider/provider.dart';
-import 'package:today_weather/pages/weather_info/weather_info.dart';
 
 class TodayWeather extends StatefulWidget {
   const TodayWeather({Key? key}) : super(key: key);
@@ -14,7 +12,7 @@ class TodayWeather extends StatefulWidget {
 
 class _TodayWeatherState extends State<TodayWeather>
 {
-  int _bottomItemIndex = 0;
+  int _bottomItemIndex = 2;
 
   final List<Widget> _pages = [
     Weather(),

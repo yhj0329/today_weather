@@ -431,6 +431,7 @@ class WeatherInfo{
     else if (text == "흐림") {
       return SvgPicture.asset(
         'assets/weather/cloudy.svg',
+        color: Colors.grey,
         width: 80,
         height: 80,
       );
@@ -438,6 +439,7 @@ class WeatherInfo{
     else if (text.contains("비")) {
       return SvgPicture.asset(
         'assets/weather/rain.svg',
+        color: Colors.blue,
         width: 80,
         height: 80,
       );
@@ -445,6 +447,7 @@ class WeatherInfo{
     else if (text.contains("눈")) {
       return SvgPicture.asset(
         'assets/weather/snow.svg',
+        color: Colors.lightBlueAccent,
         width: 80,
         height: 80,
       );
