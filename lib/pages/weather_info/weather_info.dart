@@ -39,10 +39,6 @@ class WeatherInfo{
   double? latitude;
   double? longitude;
 
-  void temp() {
-    print(latitude);
-  }
-
   Future<void> loadLocation() async {
     MyLocation myLocation = MyLocation();
     await myLocation.getMyCurrentLocation();
