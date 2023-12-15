@@ -33,12 +33,12 @@ class Clothes extends StatelessWidget {
             )
           ],
         ),
-        foodRecommend(double.parse(Provider.of<WeatherInfo>(context).tempMin[0]))
+        clothesRecommend(double.parse(Provider.of<WeatherInfo>(context).tempMin[0]))
       ],
     );
   }
 
-  Widget foodRecommend(double tempurture) {
+  Widget clothesRecommend(double tempurture) {
     if (tempurture < 0) {
       return SizedBox(
         height: 470,
