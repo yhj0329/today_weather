@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:today_weather/pages/weather.dart';
 import 'package:today_weather/pages/clothes.dart';
 import 'package:today_weather/pages/food.dart';
+import 'package:provider/provider.dart';
+import 'package:today_weather/pages/weather_info/weather_info.dart';
 
 class TodayWeather extends StatefulWidget {
   const TodayWeather({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _SuitMeState();
+  State<StatefulWidget> createState() => _TodayWeatherState();
 }
 
-class _SuitMeState extends State<TodayWeather>
+class _TodayWeatherState extends State<TodayWeather>
 {
   int _bottomItemIndex = 0;
-  bool _appbarSettingsIcon = false;
 
   final List<Widget> _pages = [
-    Weahter(),
+    Weather(),
     Clothes(),
     Food(),
   ];
@@ -37,30 +38,41 @@ class _SuitMeState extends State<TodayWeather>
             ),
             title: const Text("Today Weather")),
           body: _pages[_bottomItemIndex],
-          bottomNavigationBar: BottomNavigationBar(
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.cloud),
-                label: 'Weather',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.wc),
-                label: 'Clothes',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.food_bank_outlined),
-                label: 'Food',
-              ),
-            ],
-            currentIndex: _bottomItemIndex,
-            selectedItemColor: Colors.lightGreen,
-            onTap: (int index) {
-              setState(() {
-                _bottomItemIndex = index;
-              });
-            },
+          bottomNavigationBar: Container(
+            height: 110,
+            decoration: const BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 10,
+                ),
+              ],
+            ),
+            child: BottomNavigationBar(
+              items: const[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.cloud),
+                  label: '날씨',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.wc),
+                  label: '옷 추천',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.food_bank_outlined),
+                  label: '음식 추천',
+                ),
+              ],
+              currentIndex: _bottomItemIndex,
+              selectedFontSize: 16,
+              selectedItemColor: Colors.blue,
+              onTap: (int index) {
+                setState(() {
+                  _bottomItemIndex = index;
+                });
+              },
+            ),
           ),
-        )
-    );
+        ));
   }
 }
