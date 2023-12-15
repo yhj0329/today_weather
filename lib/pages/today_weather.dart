@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:today_weather/pages/weather.dart';
 import 'package:today_weather/pages/clothes.dart';
 import 'package:today_weather/pages/food.dart';
+import 'package:provider/provider.dart';
+import 'package:today_weather/pages/weather_info/weather_info.dart';
 
 class TodayWeather extends StatefulWidget {
   const TodayWeather({Key? key}) : super(key: key);
@@ -62,7 +64,6 @@ class _TodayWeatherState extends State<TodayWeather>
                 ),
               ],
               currentIndex: _bottomItemIndex,
-
               selectedFontSize: 16,
               selectedItemColor: Colors.blue,
               onTap: (int index) {
@@ -72,7 +73,6 @@ class _TodayWeatherState extends State<TodayWeather>
               },
             ),
           ),
-        )
-    );
+        ));
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:today_weather/pages/weather_info/weather_info.dart';
 
 class Weather extends StatefulWidget {
   const Weather({super.key});
@@ -30,12 +32,13 @@ class _WeatherState extends State<Weather> {
               locale: 'ko_KR',
               focusedDay: _focusedDay,
               firstDay: DateTime.utc(2021, 07, 01),
-              lastDay: DateTime.now().add(const Duration(days: 9)),
+              lastDay: DateTime.now().add(const Duration(days: 7)),
               onDaySelected: (DateTime selectedDay, DateTime focusedDay) {
                 setState(() {
-                  date = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).compareTo(DateTime(selectedDay.year, selectedDay.month, selectedDay.day));
                   _selectedDay = selectedDay;
                   _focusedDay = focusedDay;
+                  date = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).compareTo(DateTime(selectedDay.year, selectedDay.month, selectedDay.day));
+                  if (date > 0) Provider.of<WeatherInfo>(context, listen: false).loadPastWeatherInfo(_selectedDay);
                 });
               },
               selectedDayPredicate: (DateTime day) {
@@ -66,20 +69,7 @@ class _WeatherState extends State<Weather> {
                 outsideDaysVisible: false
               ),
             ),
-            Text(_selectedDay.toString()),
-            Text("위치"),
-            Text("온도"),
-            Text("날씨"),
-            Text("바람세기"),
-            Text("습도"),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("대기질지수"),
-                Text("미세먼지"),
-                Text("초미세먼지"),
-              ],
-            )
+            Provider.of<WeatherInfo>(context).weatherStatus(_selectedDay, _selectedDay.day - DateTime.now().day, date)
           ]),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:today_weather/pages/today_weather.dart';
 import 'package:today_weather/pages/weather_info/weather_info.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:provider/provider.dart';
 
 
 class Loading extends StatefulWidget {
@@ -20,13 +21,18 @@ class _LoadingState extends State<Loading> {
   }
 
   void getInfo () async{
-    await WeatherInfo().loadLocation();
-    await WeatherInfo().loadWeatherInfo();
+    WeatherInfo info = WeatherInfo();
+    await info.loadLocation();
+    await info.loadWeatherInfo();
+    await info.loadPastWeatherInfo(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day-2));
 
     if(!mounted) return;
     Navigator.push(context,
         MaterialPageRoute(builder:
-            (context) => const TodayWeather()));
+            (context) => MaterialApp(
+          home: Provider(
+          create: (context) => info,
+          child: TodayWeather()))));
   }
 
   @override
